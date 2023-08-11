@@ -1,1 +1,13 @@
+*
+
+!*/
+
+!.gitignore
 !src/
+!example/example.c
+!example/example_text.txt
+
+!test/file_test.txt
+!test/Makefile
+!test/test.bat
+!test/test.c
