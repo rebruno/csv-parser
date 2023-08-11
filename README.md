@@ -46,8 +46,8 @@ int main(void){
 
 `int initialize_csv(CSV *c, FILE *f);` FILE must be an open stream  
 
-`int get_next_line(CSV *csv);` Loads next line into c->row  
-`int get_next_line2(CSV *csv, int delimiter);` Loads next line into c->row    
+`int get_next_line(CSV *csv);` Loads next line into csv->row  
+`int get_next_line2(CSV *csv, int delimiter);` Loads next line into csv->row    
 `Row get_next_row(CSV *csv);` Returns next row  
 
 `int destroy_csv(CSV *c)`   
