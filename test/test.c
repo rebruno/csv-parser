@@ -61,7 +61,7 @@ int test_get_next_line(void){
         return -1;
     }
 
-    Row r = get_next_line2(c);
+    Row r = get_next_row(c);
     result = r.size;
     if (result < 0){
         return -1;
