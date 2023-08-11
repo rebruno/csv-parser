@@ -5,6 +5,9 @@
 !.gitignore
 !README.md
 !src/
+
+!example/Makefile
+!example/example.bat
 !example/example.c
 !example/example_text.txt
 

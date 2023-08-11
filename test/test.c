@@ -17,10 +17,12 @@ int test___getdelimiter(void){
     }
 
     destroy_buffer(&b);
-
+    free(str);
     if (result >= 0 && sum == 4){
         return 0;
     }
+
+    fclose(f);
     
     return -1;
 
@@ -73,6 +75,8 @@ int test_get_next_line(void){
     }
 
     destroy_csv(c);
+    fclose(f);
+
     return result;
 }
 
