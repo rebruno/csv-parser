@@ -216,7 +216,6 @@ int get_next_line2(CSV *csv, int delimiter){
     char newline = '\n';
     Row *r = csv->row;
 
-    fsetpos(csv->fp, &(csv->pos));
 
     if (r->data != NULL && r->size > 0){
         free(r->data[0]);
@@ -246,7 +245,6 @@ int get_next_line2(CSV *csv, int delimiter){
 
 Exit:
     free(row_string);
-    fgetpos(csv->fp, &(csv->pos));
 
     return r->size;
 
@@ -300,7 +298,6 @@ int create_csv(CSV *c, FILE *fp){
     int error_num = 0;
 
     c->fp = fp;
-    fgetpos(c->fp, &(c->pos));
 
     Buffer *buffer = malloc(sizeof *buffer);
     if (buffer == NULL){

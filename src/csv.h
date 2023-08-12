@@ -25,7 +25,6 @@ typedef struct Buffer{
 
 typedef struct CSV{
     FILE *fp;
-    fpos_t pos;
     Buffer *buffer;
     Row *row;
 } CSV;
